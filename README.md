@@ -8,7 +8,7 @@ automatically.
 # Usage
 ```toml
 [dependencies]
-syncwrap = "0.2.0"
+syncwrap = "0.4.0"
 ```
 
 Then in the crate that you want to have synchronous functions created for you
