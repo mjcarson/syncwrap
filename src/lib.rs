@@ -8,7 +8,7 @@
 //! # Usage
 //! ```toml
 //! [dependencies]
-//! syncwrap = "0.2.0"
+//! syncwrap = "0.4.0"
 //! ```
 //!
 //! Then in the crate that you want to have synchronous functions created for you
@@ -268,6 +268,7 @@ pub fn clone_impl(_meta: TokenStream, input: TokenStream) -> TokenStream {
     }
 
     // Clone our async methods but wrap them
+    #[cfg(feature = "sync")]
     impl #sync_name {
       // wrap them to make the synchronous
       #(
